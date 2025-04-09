@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Login: Dragon Ops</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    input {
+      background: none;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+      text-align: center;
+    }
+    button {
+      background-color: #00ff00;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #00cc00;
+    }
+    h1, p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>System Login: Dragon Ops</h1>
+  <input type="text" id="username" placeholder="Enter Username">
+  <input type="password" id="password" placeholder="Enter Access Key">
+  <button onclick="login()">Access System</button>
+  <p>Initializing protocols... Stand by.</p>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === 'System_Override' && pass === '404-PasswordNotFound') {
+        window.location.href = 'https://classroom.google.com/u/1/c/NzYyNTA5OTc2MD';
+      } else {
+        alert('Access Denied: Invalid Credentials');
+      }
+    }
+  </script>
+</body>
+</html>
+
